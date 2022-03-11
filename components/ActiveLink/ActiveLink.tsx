@@ -1,8 +1,14 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { FC } from 'react'
 import styles from './ActiveLink.module.css'
 
-const ActiveLink = ({ href, text }) => {
+interface ActiveLinkProps {
+  href: string
+  text: string
+}
+
+const ActiveLink: FC<ActiveLinkProps> = ({ href, text }) => {
   const { asPath } = useRouter()
 
   return (

@@ -1,8 +1,9 @@
 import Head from 'next/head'
+import { FC } from 'react'
 import NavBar from '../../components/Navbar/Navbar'
 import styles from './MainLayout.module.css'
 
-const MainLayout = ({ children }) => {
+const MainLayout: FC = ({ children }) => {
   return (
     <div className={styles.container}>
       <Head>
